@@ -19,3 +19,20 @@ int main(){
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int aungpao[] = {a,b,c,d};
+	a = aungpao[rand()%4];
+	b = aungpao[rand()%4];
+	while(b == a){
+		b = aungpao[rand()%4];
+	}
+	c = aungpao[rand()%4];
+	while(c == a or c == b){
+		c = aungpao[rand()%4];
+	}
+	d = aungpao[rand()%4];
+	while(d == a or d == b or d == c){
+		d = aungpao[rand()%4];
+	}
+}
